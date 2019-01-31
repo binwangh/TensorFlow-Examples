@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """ Auto Encoder Example.
 
 Build a 2 layers auto-encoder with TensorFlow to compress images to a
@@ -20,9 +22,16 @@ import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+#默认为0：输出所有log信息
+#设置为1：进一步屏蔽INFO信息
+#设置为2：进一步屏蔽WARNING信息
+#设置为3：进一步屏蔽ERROR信息
+
 # Import MNIST data
 from tensorflow.examples.tutorials.mnist import input_data
-mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
+mnist = input_data.read_data_sets("./tmp/data/", one_hot=True)
 
 # Training Parameters
 learning_rate = 0.01

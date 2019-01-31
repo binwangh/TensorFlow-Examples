@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 '''
 Basic Operations example using TensorFlow library.
 
@@ -8,6 +10,13 @@ Project: https://github.com/aymericdamien/TensorFlow-Examples/
 from __future__ import print_function
 
 import tensorflow as tf
+
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+#默认为0：输出所有log信息
+#设置为1：进一步屏蔽INFO信息
+#设置为2：进一步屏蔽WARNING信息
+#设置为3：进一步屏蔽ERROR信息
 
 # Basic constant operations
 # The value returned by the constructor represents the output
